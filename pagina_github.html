@@ -1,0 +1,146 @@
+<!--
+  Archivo: pagina-github.html
+  Uso: Archivo HTML listo para subir a un repositorio de GitHub y publicar con GitHub Pages.
+  Instrucciones rápidas:
+    1) Crea un repositorio en GitHub (público o privado).
+    2) Sube este archivo como index.html a la rama main (o gh-pages).
+    3) Activa GitHub Pages en Settings → Pages y selecciona la rama.
+
+  Puedes editar el contenido (nombre, proyectos, enlaces) antes de subir.
+-->
+
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Mi página en GitHub Pages</title>
+  <meta name="description" content="Página personal de ejemplo lista para subir a GitHub Pages">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg: #0f1724; --card: #0b1220; --muted: #9aa4b2; --accent: #7dd3fc;
+      --glass: rgba(255,255,255,0.04);
+      color-scheme: dark;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+      background: linear-gradient(180deg,#071027 0%, #0b1220 100%);
+      color:#e6eef8;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.45;
+      padding:24px;
+    }
+    .container{max-width:1000px;margin:0 auto}
+    header{display:flex;align-items:center;justify-content:space-between;margin-bottom:28px}
+    .brand{display:flex;gap:14px;align-items:center}
+    .logo{width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#60a5fa);display:flex;align-items:center;justify-content:center;font-weight:700;color:#04263b}
+    nav a{color:var(--muted);text-decoration:none;margin-left:18px}
+    h1{font-size:2rem;margin:0 0 6px}
+    .sub{color:var(--muted);margin-bottom:18px}
+
+    .hero{display:grid;grid-template-columns:1fr 320px;gap:22px;align-items:start;margin-bottom:28px}
+    .card{background:var(--card);padding:18px;border-radius:12px;box-shadow:0 6px 20px rgba(2,6,23,0.6);border:1px solid rgba(255,255,255,0.03)}
+
+    .projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px;margin-top:14px}
+    .project{padding:14px;border-radius:10px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border:1px solid rgba(255,255,255,0.02)}
+    .project h3{margin:0 0 6px;font-size:1rem}
+    .project p{margin:0;color:var(--muted);font-size:0.92rem}
+
+    .side .profile{display:flex;gap:12px;align-items:center;margin-bottom:12px}
+    .avatar{width:64px;height:64px;border-radius:10px;background:linear-gradient(135deg,#1e293b,#0ea5e9);display:flex;align-items:center;justify-content:center;font-weight:700}
+    .btn{display:inline-block;padding:8px 12px;border-radius:8px;background:linear-gradient(90deg,#06b6d4,#60a5fa);color:#052630;text-decoration:none;font-weight:600}
+
+    footer{margin-top:30px;color:var(--muted);font-size:0.9rem;text-align:center}
+
+    /* responsive */
+    @media (max-width:880px){
+      .hero{grid-template-columns:1fr}
+      nav a{display:none}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">MG</div>
+        <div>
+          <div style="font-weight:700">Mi Nombre</div>
+          <div style="color:var(--muted);font-size:0.92rem">Desarrollador · Diseñador · Creador</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#proyectos">Proyectos</a>
+        <a href="#sobre-mi">Sobre mí</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </header>
+
+    <main class="hero">
+      <section class="card">
+        <h1>Hola — soy Mi Nombre</h1>
+        <div class="sub">Creo interfaces limpias y web apps rápidas. Aquí tienes una página de ejemplo lista para GitHub Pages.</div>
+
+        <h2 style="font-size:1.05rem;margin-top:12px">Últimos proyectos</h2>
+        <div class="projects" id="proyectos">
+          <article class="project">
+            <h3>Proyecto Uno</h3>
+            <p>Una SPA construida con HTML, CSS y JavaScript. Ideal para portfolios y pequeñas apps.</p>
+          </article>
+          <article class="project">
+            <h3>Proyecto Dos</h3>
+            <p>API pública que muestra datos en tiempo real y ejemplos de consumo con fetch.</p>
+          </article>
+          <article class="project">
+            <h3>Proyecto Tres</h3>
+            <p>Pequeño juego web educativo que enseña conceptos básicos de programación.</p>
+          </article>
+        </div>
+
+        <section id="sobre-mi" style="margin-top:16px">
+          <h2 style="font-size:1.05rem">Sobre mí</h2>
+          <p class="sub">Soy desarrollador web con interés en accesibilidad y rendimiento. Me gusta construir interfaces claras y documentación útil para que otros puedan usar mi trabajo.</p>
+        </section>
+
+      </section>
+
+      <aside class="side">
+        <div class="card" style="padding:14px">
+          <div class="profile">
+            <div class="avatar">MN</div>
+            <div>
+              <div style="font-weight:700">Mi Nombre</div>
+              <div style="color:var(--muted);font-size:0.9rem">Frontend · UX · Open Source</div>
+            </div>
+          </div>
+
+          <p style="color:var(--muted);font-size:0.95rem;margin-bottom:12px">Descarga el repo, personaliza esta página y publícala en GitHub Pages en unos minutos.</p>
+
+          <a class="btn" href="#contacto">Contáctame</a>
+        </div>
+
+        <div class="card" style="margin-top:12px;padding:12px">
+          <h3 style="margin-top:0">Contacto</h3>
+          <p class="sub">¿Quieres colaborar? Escribe a <a href="mailto:tu@email.com">tu@email.com</a></p>
+          <p style="margin-top:8px;color:var(--muted);font-size:0.9rem">Sigue mi trabajo en <strong>GitHub</strong> y actualizo proyectos con frecuencia.</p>
+        </div>
+
+      </aside>
+    </main>
+
+    <footer id="contacto">&copy; <span id="year"></span> Mi Nombre — Hecho con ♥. · <small style="color:var(--muted)">Este es un ejemplo para GitHub Pages.</small></footer>
+  </div>
+
+  <script>
+    // Pequeños scripts: año dinámico
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
